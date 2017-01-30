@@ -1,0 +1,2 @@
+They tend to respond better to things that would start a question such as, who, what, where, why and how. Also very generalized statements are good for it. Things like proper nouns and more specific things go over there head.
+IN responses to questions, how are you?---Good or bad, maybe saying I don't understand if the question is crazy
