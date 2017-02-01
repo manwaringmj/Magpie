@@ -1,0 +1,1 @@
+The problem is the word mother is in smothered and so it will read that and say how about your parents. Also in the word know it see the word no and so it will say why so negative, even though there isn't a negative intent in the response.  

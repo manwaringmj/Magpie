@@ -1,3 +1,4 @@
+
 /**
  * A program to carry on conversations with a human user. This is the initial
  * version that:
@@ -13,6 +14,7 @@
  * @version April 2012
  */
 public class Magpie2 {
+
 	/**
 	 * Get a default greeting
 	 * 
@@ -33,22 +35,52 @@ public class Magpie2 {
 		String response = "";
 		if (statement.indexOf("no") >= 0) {
 			response = "Why so negative?";
-		} else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
-				|| statement.indexOf("sister") >= 0
-				|| statement.indexOf("brother") >= 0) {
-			response = "Tell me more about your family.";
-		} else {
+		} else if (statement.indexOf("dog") >= 0
+				|| statement.indexOf("cat") >= 0
+				|| statement.indexOf("snake") >= 0
+				|| statement.indexOf("chicken") >= 0) {
+			response = "Tell me more about your pets?";
+		}else{
 			response = getRandomResponse();
+		}
+		if (statement.indexOf("Mr.") >= 0){
+			response = "Your teacher sounds more than Fantastic!!";
+		}else if("".equals(statement.trim())){
+			response = "Say something dude";
+		}else{
+			response = getRandomResponse();
+		}
+		if (statement.indexOf("how are you")>= 0){
+			response = greeting();
 		}
 		return response;
 	}
+
 
 	/**
 	 * Pick a default response to use if nothing else fits.
 	 * 
 	 * @return a non-committal string
 	 */
+	private String greeting(){
+		final int NUMBER_OF_RESPONSES = 4;
+		double r = Math.random();
+		int whichResponse = (int) (r * NUMBER_OF_RESPONSES);
+		String response = "";
+
+		if (whichResponse == 0) {
+			response = "Had a bad day";
+		} else if (whichResponse == 1) {
+			response = "Great!!!";
+		} else if (whichResponse == 2) {
+			response = "I need space, leave me alone";
+		} else if (whichResponse == 3) {
+			response = "bad bad bad";
+		}
+
+		return response;
+		
+	}
 	private String getRandomResponse() {
 		final int NUMBER_OF_RESPONSES = 4;
 		double r = Math.random();
